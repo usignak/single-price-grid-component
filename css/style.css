@@ -7,21 +7,15 @@
 }
 
 html {
-  height: 100%;
   font-size: 62.5%;
 }
 
 body {
-  height: 100%;
   background-color: hsl(204, 43%, 93%);
   font-size: 1.6rem;
   font-weight: 400;
   font-family: "Karla", sans-serif;
   padding: 60px 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 .container {
@@ -33,12 +27,12 @@ body {
 }
 
 .wrapper {
-  padding: 40px;
+  padding: 20px;
 }
 
 .title--h1 {
   color: hsl(179, 62%, 43%);
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   font-weight: 700;
   margin-bottom: 25px;
 }
@@ -52,7 +46,7 @@ body {
 
 .info {
   color: hsl(71, 73%, 54%);
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 700;
   margin-bottom: 15px;
 }
@@ -60,28 +54,30 @@ body {
 .container__item p {
   color: hsl(218, 22%, 67%);
   line-height: 1.5;
+  font-size: 1.4rem;
 }
 
 .container__item--two-cols {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .box {
   color: hsl(204, 43%, 93%);
-  padding: 40px;
+  padding: 20px;
 }
 
 .box:first-of-type {
-  width: 50%;
+  width: 100%;
   background-color: hsl(179, 62%, 43%);
-  border-bottom-left-radius: 5px;
 }
 
 .box:last-of-type {
-  width: 50%;
+  width: 100%;
   background-color: hsla(179, 62%, 43%, .8);
+  border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
 
@@ -120,6 +116,11 @@ body {
   box-shadow: 0 10px 10px hsla(0, 0%, 0%, .2);
 }
 
+.btn:hover,
+.btn:focus {
+  background-color: hsla(71, 73%, 54%, 0.816);
+}
+
 .list {
   list-style: none;
   padding: 0;
@@ -135,10 +136,65 @@ body {
   opacity: .8;
 }
 
+.list a:hover,
+.list a:focus {
+  color: hsl(0, 100%, 100%);
+}
+
 .attribution { 
   text-align: center; 
 }
 
 .attribution a { 
   color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (min-width: 800px) {
+  html {
+    height: 100%;
+  }
+
+  body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 30px;
+  }
+
+  .wrapper {
+    padding: 40px;
+  }
+
+  .title--h1 {
+    font-size: 2.5rem;
+  }
+
+  .info {
+    font-size: 1.8rem;
+  }
+
+  .container__item p {
+    font-size: 1.6rem;
+  }
+
+  .container__item--two-cols {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .box {
+    padding: 40px;
+  }
+
+  .box:first-of-type {
+    width: 50%;
+    border-bottom-left-radius: 5px;
+  }
+
+  .box:last-of-type {
+    width: 50%;
+    border-bottom-left-radius: 0;
+  }
 }
