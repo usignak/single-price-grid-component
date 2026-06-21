@@ -54,7 +54,6 @@ body {
 .container__item p {
   color: hsl(218, 22%, 67%);
   line-height: 1.5;
-  font-size: 1.4rem;
 }
 
 .container__item--two-cols {
@@ -173,10 +172,6 @@ body {
 
   .info {
     font-size: 1.8rem;
-  }
-
-  .container__item p {
-    font-size: 1.6rem;
   }
 
   .container__item--two-cols {
